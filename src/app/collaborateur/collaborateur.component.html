@@ -1,0 +1,25 @@
+<p>collaborateur works!</p>
+
+
+Nom <input [(ngModel)]="nom"><br><br>
+Prenom <input [(ngModel)]="prenom"><br><br>
+Email <input [(ngModel)]="email"><br><br>
+
+<button (click)="addCollaborateur()">Créer un collaborateur</button><br><br>
+
+
+Le nom entré est {{nom}} <br>
+Le prenom entré est {{prenom}} <br>
+L'email entré est {{email}} <br>
+
+<br><br>
+
+Liste des collaborateurs
+
+<br><br>
+
+Rechercher un collaborateur par son (NOM) <input [(ngModel)]="filterCollaborateurName"><br><br>
+
+<ul>
+    <li *ngFor="let col of collaborateurs | filterCollaborateurPipe: 'nom': filterCollaborateurName "> {{ col.nom }} {{ col.prenom }}   {{ col.email }}</li>
+</ul>

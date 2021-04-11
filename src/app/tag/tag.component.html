@@ -1,0 +1,26 @@
+<p>tag works!</p>
+
+Ajouter un tag
+
+Libellé <input [(ngModel)]="libelle"><br><br>
+
+<button (click)="addTag()">Créer un Tag</button><br><br>
+
+
+Le tag entré est {{libelle}} <br>
+
+<br><br>
+
+Liste des tags
+
+<br><br>
+
+
+<ng-container #tagsContainer >
+    <ul>
+        <li *ngFor="let col of tags"> {{ col.libelle }} </li>
+    </ul>
+</ng-container>
+
+
+

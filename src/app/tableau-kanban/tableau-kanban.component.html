@@ -1,0 +1,23 @@
+<p>tableau-kanban works!</p>
+
+Nom du tableau Kanban <input [(ngModel)]="libelle"><br><br>
+Collaborateurs 
+
+<select multiple [(ngModel)]="selectedCollaborateurs">
+    <option *ngFor="let col of collaborateurs" [value]="col">{{ col.nom }} {{ col.prenom }}</option>
+</select> <br><br>
+
+<button (click)="addTableauKanban()">Créer un tableau kanban</button><br><br>
+
+
+Le nom du tableau kanban entré est {{libelle}} <br>
+
+<br><br>
+
+Liste des tableaux kanbans
+
+<br><br>
+
+<ul>
+    <li *ngFor="let tabKanban of tableauxKanbans "> {{ tabKanban.libelle }}</li>
+</ul>
