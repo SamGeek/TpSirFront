@@ -9,6 +9,7 @@ import { CollaborateurComponent } from './collaborateur/collaborateur.component'
 import { TagComponent } from './tag/tag.component';
 import { FilterCollaborateurPipePipe } from './filter-collaborateur-pipe.pipe';
 import { TableauKanbanComponent } from './tableau-kanban/tableau-kanban.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TableauKanbanComponent } from './tableau-kanban/tableau-kanban.componen
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    MDBBootstrapModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],

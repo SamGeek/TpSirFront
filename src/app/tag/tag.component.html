@@ -24,3 +24,21 @@ Liste des tags
 
 
 
+
+<table mdbTable class="z-depth-1">
+    <thead class="sticky-top">
+    <tr>
+      <th *ngFor="let head of tags; let i = index"  >
+      </th>
+    </tr>
+    </thead>
+    <tbody #row>
+    <tr mdbTableCol *ngFor="let el of tags; let i = index">
+      <th  scope="row">Libelle</th>
+      <td  class="red-text">{{el.libelle}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+
