@@ -22,7 +22,7 @@ export class CollaborateurComponent implements OnInit {
   ngOnInit(): void {
 
     setTimeout(function(){  }, 5000);
-
+    
     this.http.get<Collaborateur[]>('/api/collaborateur/getAll' ).subscribe((data) => {
 
       data.forEach(element => {
